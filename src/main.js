@@ -11,6 +11,11 @@ import 'sweetalert2/dist/sweetalert2.min.css'
 import mixin from './mixin.js'
 import ImgInputer from 'vue-img-inputer'
 import 'vue-img-inputer/dist/index.css'
+import VueGtag from 'vue-gtag'
+
+Vue.use(VueGtag, {
+  config: { id: 'G-1LMC9D8Q4P' }
+})
 
 Vue.component('ImgInputer', ImgInputer)
 Vue.use(VueSweetalert2)
@@ -21,5 +26,5 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: (h) => h(App)
 }).$mount('#app')
